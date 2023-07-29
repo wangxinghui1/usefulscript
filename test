@@ -1,0 +1,43 @@
+def confirmUser(self, lst, current_value, next_value):
+    index = 0
+    self.next_element = None  # Initialize self.next_element with a default value
+    while index < len(lst):
+        self.current_element = lst[index]
+        if index < len(lst) - 1:
+            self.next_element = lst[index + 1]
+            print(self.current_element, self.next_element)
+            index += 2
+        else:
+            print(self.current_element)
+            index += 1
+
+        if self.current_element == current_value and self.next_element == next_value:
+            return True
+        else:
+            return False
+
+def getIndexvalue(self):
+    df = pd.read_excel('D:\\SVNsoftwarePackageRelease\\BYDCollectExe_2023_07_19\\res\\Data\\login.xlsx')
+    for i in df.index:
+        self.currentvalue = df.iloc[i].values[0]
+        self.nextvalue = df.iloc[i].values[3]
+        print(self.currentvalue)
+        print(self.nextvalue)
+
+        # Make sure self.userlistinfo is initialized properly before calling confirmUser
+        # For example, self.userlistinfo = [1, 2, 3, 4, 5]
+        confirmation_result = self.confirmUser(self.userlistinfo, self.currentvalue, self.nextvalue)
+
+        if confirmation_result:
+            print('新建成功')
+        else:
+            print('新建失败')
+
+def test(self):
+    # Make sure self.userlistinfo is initialized properly before calling confirmUser
+    # For example, self.userlistinfo = [1, 2, 3, 4, 5]
+    confirmation_result = self.confirmUser(self.userlistinfo, self.currentvalue, self.nextvalue)
+    if confirmation_result:
+        print('新建成功')
+    else:
+        print('新建失败')
