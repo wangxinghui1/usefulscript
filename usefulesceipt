@@ -1,0 +1,17 @@
+def print_current_and_next_elements(lst):
+    index = 0
+    while index < len(lst):
+        current_element = lst[index]
+        if index < len(lst) - 1:
+            next_element = lst[index + 1]
+            print(f"Current Element: {current_element}, Next Element: {next_element}")
+            index += 2
+        else:
+            print(f"Current Element: {current_element}")
+            index += 1
+
+# 示例列表
+my_list = [1, 2, 3, 4, 5]
+
+# 打印当前元素和下一个元素（最后一个元素只打印本身）
+print_current_and_next_elements(my_list)
